@@ -1,0 +1,2 @@
+class Channels():
+    FANTASY = 920709796523552779

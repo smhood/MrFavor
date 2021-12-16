@@ -1,0 +1,6 @@
+python-dotenv
+discord.py
+requests
+asyncio
+espn_api
+table2ascii
