@@ -40,7 +40,7 @@ class Scoreboard(discord.ext.commands.Cog, name='Scoreboard module'):
         current_week = self.league.current_week
         body = []
         max_characters = 12
-        for match in self.league.scoreboard():
+        for match in self.league.box_scores():
             current_leader = "TIED"
             home_team_name = (match.home_team.team_name[:max_characters] + '..') if len(match.home_team.team_name) > max_characters else match.home_team.team_name
             away_team_name = ((match.away_team.team_name[:max_characters] + '..') if len(match.away_team.team_name) > max_characters else match.away_team.team_name) if match.away_team else "BYE"
