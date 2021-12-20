@@ -15,8 +15,11 @@ class Memes(discord.ext.commands.Cog, name='Meme module'):
         response = requests.get(request)
         meme = response.json()
 
-        if meme['nsfw'] and (ctx.channel != Channels.NSFW):
+        if meme['nsfw'] and (ctx.channel.id == Channels.NSFW):
             await ctx.send(f"|| {meme['url']} ||")
+            return
+        elif meme['nsfw'] and (ctx.channel.id != Channels.NSFW):
+            await ctx.send(f"You're suspended for porn on school grounds..... But Mr.Favor still loves you.")
             return
 
         await ctx.send(meme['url'] if not meme['spoiler'] else f"|| {meme['url']} ||")
