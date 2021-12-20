@@ -10,6 +10,7 @@ from clients.custom_bot import CustomBotClient
 
 ## Cogs
 from cogs.general.greetings import Greetings
+from cogs.general.memes import Memes
 from cogs.fantasy.scoreboard import Scoreboard
 from cogs.general.happyhour import HappyHour
 
@@ -31,6 +32,7 @@ def main():
     )
 
     bot.add_cog(Greetings(bot))
+    bot.add_cog(Memes(bot))
     bot.add_cog(Scoreboard(bot, LEAGUE_ID, ESPN_S2, ESPN_SWID))
     bot.add_cog(HappyHour(bot))
 

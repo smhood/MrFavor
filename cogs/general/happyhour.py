@@ -1,8 +1,6 @@
 import discord
 import random
 
-from resources.happyhour import HappyHour
-
 LOCATIONS = [
     "Pub 42",
     "Manning’s",
