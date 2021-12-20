@@ -26,6 +26,6 @@ class HappyHour(discord.ext.commands.Cog, name='HappyHour module'):
         self.bot = bot
 
     @discord.ext.commands.command(name="hhrandom")
-    async def adhoc_play(self, ctx):
+    async def hhrandom(self, ctx):
         pick = random.choice(LOCATIONS)
         await ctx.send(f'Hey, you should go to **{pick}**, and remember, Mr.Favor loves you.')
